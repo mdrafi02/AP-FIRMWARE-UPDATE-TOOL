@@ -212,7 +212,7 @@ def main(FW_NAME,AP_IP):
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
-        print("incorrect USAGE!! The correct usage is as shown below.........\npython fw_update.py FIRMWARE_NAME AP1 [[AP2][AP3]....]")
+        print("incorrect USAGE!! The correct usage is as shown below.........\npython update.py FIRMWARE_NAME AP1 [[AP2][AP3]....]")
         sys.exit()
 
     process = []   
