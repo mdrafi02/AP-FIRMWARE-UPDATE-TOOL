@@ -153,7 +153,6 @@ class FWUpdate(sshclient):
                     continue
         
     def connect_to_ap(self):
-
         for password in range(1,4):  
 
             if self.Right_password:
@@ -197,11 +196,17 @@ class FWUpdate(sshclient):
         print("successfully updated second image of AP %s"%self.ap_ip)
 
     def update(self):
-        print("Please wait while firmware of AP %s is getting UPDATED"%self.ap_ip)
+        print("Please wait while firmware of AP %s is getting UPDATED.........."%self.ap_ip)
+	print("\nTrying Connecting to the AP %s for the first time............."%self.ap_ip)
         self.connect_to_ap()
+	print("Successfully Connected to the AP %s"%self.ap_ip)
         self.update_first_time()
+	print("Updated the first image of AP %s"$self.ap_ip)
+	print("Trying Connecting to the AP %s for the second time"%self.ap_ip)
         self.connect_to_ap()
+	print("Successfully Connected to the AP %s"%self.ap_ip)
         self.update_second_time()
+	print("Successfully Updated second image of the AP %s"%self.ap_ip)
         self.logout()
         print("AP %s is SUCCESSFULLY UPDATED !!!"%self.ap_ip)
 
