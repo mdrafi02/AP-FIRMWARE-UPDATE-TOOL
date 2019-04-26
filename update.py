@@ -48,7 +48,7 @@ class sshclient:
             self.__del__()
 
 
-    def read_until(self, expected, timeout = 20):
+    def read_until(self, expected, timeout = 200):
         if not expected:
             return ""
 
